@@ -1,0 +1,79 @@
+1. Clone repo, checkout assigned branch into local one, inspect tree.
+
+Result: tree is tiny.
+
+2. Read all files in tree.
+
+Results:
+* programming language: Java;
+* uses Maven;
+* JUnit testing (JUnit 5), Jupiter;
+* input: CSV data;
+* automated testing with Jenkins,
+* also includes support for GitLab CI (eXXcellent has repos on GitLab and
+  GitHub).
+
+We’ll be putting this up on GitHub.
+
+3. Do not reinvent the wheel. Find suitable CSV library.
+
+First shot (search on GitHub) leads to
+<https://github.com/uniVocity/csv-parsers-comparison>. Own library is at the
+top, may be biased. We use the resource to avoid the libraries with detected
+problems.
+
+Next findings (tweaked GitHub search parameters):
+* Apache Commons CSV <https://commons.apache.org/proper/commons-csv/>: well
+  known project with very good development process, license: Apache-2.0,
+  example code.
+* super-csv <https://github.com/super-csv/super-csv/>: lots of GitHub stars,
+  many users, license: Apache-2.0, activity seems to have stalled.
+
+Other findings (web search):
+* OpenCSV <http://opencsv.sourceforge.net/>: may be worth a try if Commons CSV
+  turns out to be unsuitable; Commons CSV developers hope that their
+  implementation renders OpenCSV redundant.
+  License: Apache-2.0.
+
+4. Add library as dependency to pom.xml.
+
+5. Add test case for small CSV test data snippet; ensure that it fails; commit.
+
+6. Have a short look at the CSV library API documentation.
+
+Very straightforward, easy to use.
+
+7. Add class which converts input data to required output format.
+
+Usual process: write the code, commit, test whether it compiles, fix spelling
+mistakes in API documentation comments, commit again (several times),
+interactive rebase to combine related commits into portions that are easy to
+review.
+
+This time: not much to rebase, code was rather straightforward, so there was not
+much to fix. I have left one commit unsquashed on purpose (see commit message).
+
+Code is so small that the data analyzer class has been written in one go.
+
+8. Integrate analyzer into main class and complete the challenge with the
+   football part.
+
+Use several commits in order to keep them small.
+
+9. Clean up documentation a bit.
+
+
+Things that might be done in future:
+* Switch to OpenJDK for Travis. Experience with Moodle testing has shown that
+  Oracle JDK install is often unreliable. It has however been working fine with
+  this challenge so far.
+* Move the code to another package. Strictly speaking, we are polluting the
+  eXXcellent namespace, without coordination with others. This is of course not
+  a problem as we are only delivering a test project.
+* Insert copyright headers into all files (usually done by automated script).
+  Left as an exercise for the reader because it is rather dull work.
+
+
+Total time taken: about 3 hours (including taking these development notes; not
+counting breaks), plus some time for research (CSV libraries, goal difference in
+football).
