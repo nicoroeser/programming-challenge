@@ -16,12 +16,12 @@ public final class App {
         { "MnT", "MxT", "Day" };
 
     /**
-     * Process all input and print output. Pass on I/O errors for handling by
-     * the caller.
+     * Process weather input and print output. Pass on I/O errors for handling
+     * by the caller.
      *
      * @throws IOException if an I/O error occurs.
      */
-    public static void processData() throws IOException {
+    public static void processWeatherData() throws IOException {
         InputStream resIn =
                 App.class.getResourceAsStream(WEATHER_RESOURCE_NAME);
         CSVDataAnalyzer weatherAnalyzer =
@@ -34,7 +34,15 @@ public final class App {
 
         System.out.printf("Day with smallest temperature spread : %s%n",
                 dayWithSmallestTempSpread);
+    }
 
+    /**
+     * Process football input and print output. Pass on I/O errors for handling
+     * by the caller.
+     *
+     * @throws IOException if an I/O error occurs.
+     */
+    public static void processFootballData() throws IOException {
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n",
                 teamWithSmallestGoalSpread);
@@ -46,7 +54,8 @@ public final class App {
      */
     public static void main(String... args) {
         try {
-            processData();
+            processWeatherData();
+            processFootballData();
         } catch (IOException e) {
             // XXX: we normally use a Logger for this, but we try to KISS.
             System.err.println();
