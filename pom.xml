@@ -4,10 +4,10 @@
 
     <groupId>de.exxcellent</groupId>
     <artifactId>challenge</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>weather</name>
-    <description>eXXcellent programming challenge</description>
+    <description>eXXcellent weather and football programming challenge</description>
 
     <build>
         <plugins>
