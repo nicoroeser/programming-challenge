@@ -4,10 +4,19 @@ import java.io.InputStream;
 import java.io.IOException;
 
 /**
- * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
- * design. Read: create your own classes and packages as appropriate.
+ * Starter for data analysis. First starts the weather, then the football
+ * analysis.
+ * <P>
+ * This is the launcher part of the solution to the eXXcellent weather
+ * programming challenge.
  *
- * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
+ * @author Benjamin Schmid <benjamin.schmid@exxcellent.de> (original skeleton)
+ * @author Nicolas Roeser <nicolas.roeser@uni-ulm.de> (challenge solution)
+ */
+/*
+ * Note to reviewers: I would normally have renamed the class in order to give
+ * it a more suitable name which tells more about what it does. For the
+ * programming challenge, I have skipped this.
  */
 public final class App {
 
@@ -63,8 +72,9 @@ public final class App {
     }
 
     /**
-     * This is the main entry method of your program.
-     * @param args The CLI arguments passed
+     * Main entry method of the data analysis program.
+     *
+     * @param args the CLI arguments passed. Ignored.
      */
     public static void main(String... args) {
         try {
@@ -77,4 +87,5 @@ public final class App {
             return;
         }
     }
+
 }
