@@ -114,6 +114,11 @@ public class CSVDataAnalyzer {
                 throw new IOException("wrong header or malformed input", e);
             }
 
+            // XXX: the challenge does not clearly say how to handle invalid
+            // input. Make the code robust by ignoring records which have the
+            // wrong order of values.
+            if (max < min) continue;
+
             int spread = max - min;
             // XXX: the challenge does not define which record to use in
             // case of several minimum spread records (same value).
