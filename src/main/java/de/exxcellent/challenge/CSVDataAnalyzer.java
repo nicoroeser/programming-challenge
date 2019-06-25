@@ -100,7 +100,8 @@ public class CSVDataAnalyzer {
         if (consumed) return;
 
         final CSVParser parser =
-                CSVParser.parse(in, StandardCharsets.UTF_8, CSVFormat.DEFAULT);
+                CSVParser.parse(in, StandardCharsets.UTF_8,
+                        CSVFormat.DEFAULT.withHeader());
 
         for (CSVRecord rec : parser) {
             int min, max;
