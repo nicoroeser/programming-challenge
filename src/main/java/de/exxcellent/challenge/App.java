@@ -15,6 +15,10 @@ public final class App {
     private static final String[] WEATHER_COLUMN_HEADINGS =
         { "MnT", "MxT", "Day" };
 
+    private static final String FOOTBALL_RESOURCE_NAME = "football.csv";
+    private static final String[] FOOTBALL_COLUMN_HEADINGS =
+        { "Goals Allowed", "Goals", "Team" };
+
     /**
      * Process weather input and print output. Pass on I/O errors for handling
      * by the caller.
@@ -43,7 +47,17 @@ public final class App {
      * @throws IOException if an I/O error occurs.
      */
     public static void processFootballData() throws IOException {
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
+        InputStream resIn =
+                App.class.getResourceAsStream(FOOTBALL_RESOURCE_NAME);
+        CSVDataAnalyzer footballAnalyzer =
+                new CSVDataAnalyzer(resIn,
+                        FOOTBALL_COLUMN_HEADINGS[0],
+                        FOOTBALL_COLUMN_HEADINGS[1],
+                        FOOTBALL_COLUMN_HEADINGS[2]);
+
+        String teamWithSmallestGoalSpread =
+                footballAnalyzer.getMinSpreadLabel();
+
         System.out.printf("Team with smallest goal spread       : %s%n",
                 teamWithSmallestGoalSpread);
     }
