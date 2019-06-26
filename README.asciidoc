@@ -1,37 +1,40 @@
-= eXXcellent programming challenge
+= Solution to the eXXcellent weather programming challenge
 
-This repository provides the project scaffold for a simple
-programming challenge. Though the challenge is very simple
-and a rather synthetic use-case, your results are a helpful
-starting point to discuss your programming flavor, skills
-and methodology.
+This repository provides the solution to a simple
+programming challenge, the weather challenge. Though the
+challenge is very simple and a rather synthetic use-case,
+the results are a helpful starting point to discuss
+programming flavor, skills and methodology.
 
-**BEFORE STARTING:** Please take the time and read this 
-document completely and carefully! It describes important 
-parts of the challenge.
+**NB:** Please do not try to work on this challenge, it has
+already been solved. Start with the original state (upstream
+version).
 
 
-== Goal
+== How the goal has been reached
 
-Implement a solution for the given tasks which aims for
+A solution for the given tasks has been implemented which aims for
 
-* robustness & correctness
-* readability & maintainability
-* clean software design & architecture
+* robustness & correctness,
+* readability & maintainability,
+* clean software design & architecture.
 
-Be prepared to discuss your implementation and software design
-decisions. Show us how you would solve the task when working on your day-to-day 
-job.
+The author is prepared to discuss the implementation and software design
+decisions. In order to show eXXcellent staff how one would solve the task when
+working on one’s day-to-day job, link:DEVELOPMENT_NOTES[development notes] have
+been taken.
 
-Feel free to come up with own ideas & solutions. There is no plain
-"right" or "wrong". Instead, we want to talk to you
-about _how_ you achieved your goal and about your thoughts and design
-idea and process.
+Programmers usually scan forks of a project looking for inspiration and in order
+to try to reinvent the wheel. This has been omitted this time, and in this case,
+ideas & solutions are author’s own, as you _want_ to partly reinvent the wheel
+with this programming challenge.
 
-If you feel bored by our challenge, feel free to provide
-creative alternative solutions and/or choose other technologies/
-languages, if you think they would be a better fit.
+There is no plain "right" or "wrong". Instead, people will talk about _how_ the
+goal has been achieved and about thoughts and design idea and process.
 
+The challenge has not really been boring, but rather synthetic of course. It and
+its solution hopefully more or less resembles the development needs at
+eXXcellent and helps with a job interview.
 
 
 == Tasks
@@ -101,35 +104,8 @@ Your solution should focus on **maintainability**, **reusability** and
    a specific matter** each (e.g a feature). Try to make the commit messages
    as expressive as possible, so a reader knows what a commit does.
 
-== Getting started
-
-=== Getting a copy
-The starting point for every challenge is provided as a branch in a Gitlab.com/GitHub
-hosted Git repository. Be careful to adjust the URLs below
-accordingly.
-
-To start
-
-=== Fork or directly clone the repository
-
-```
-git clone https://[gitlab|github].com/exxcellent/programming-challenge.git
-```
-or if you've forked the repository then
-```
-git clone git@[gitlab|github].com:YOURNAME/programming-challenge.git
-```
-
-See what challenges are available by listing the branches present:
-```
-git branch -a
-```
-
-=== Switch to the branch of the challenge assigned
-```
-cd programming-challenge
-git checkout challenge-CHALLENGENAME
-```
+== How to use this code
+First, fork or directly clone the repository.
 
 === Building and running
 The project scaffolds provides a Maven `pom.xml` as starting
@@ -149,10 +125,3 @@ To remove the compilation output::
 
 Or use your IDE functionality::
     to run & debug you program.
-
-== Submitting your results
-
-Ideally you provide your solutions as Git repository with
-appropriate commits and descriptions. If you have a GitLab.com
-or GitHub account, please feel free to publish your solution
-there.
